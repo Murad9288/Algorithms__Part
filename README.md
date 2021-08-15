@@ -1,5 +1,5 @@
-                                    # SEARCHING ALGORITHM
-                                    # SORTING ALGORITHM
+   # SEARCHING ALGORITHM
+   # SORTING ALGORITHM
                                                                            
                                                                            
                                                                          
