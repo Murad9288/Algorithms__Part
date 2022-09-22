@@ -5,10 +5,11 @@
 '''
 
 # Python program for implementation of MergeSort
-def mergeSort(arr):
+def mergeSort(list):
+    arr = list
     if len(arr) > 1:
 
-         # Finding the mid of the array
+        # Finding the mid of the array
         mid = len(arr)//2
 
         # Dividing the array elements
@@ -25,7 +26,7 @@ def mergeSort(arr):
 
         i = j = k = 0
 
-        # Copy data to temp arrays L[] and R[]
+        # Now checking left and right sorting and Copy data to temp arrays L[] and R[]
         while i < len(L) and j < len(R):
             if L[i] < R[j]:
                 arr[k] = L[i]
@@ -40,26 +41,18 @@ def mergeSort(arr):
             arr[k] = L[i]
             i += 1
             k += 1
-
+        # Checking if any element was right
         while j < len(R):
             arr[k] = R[j]
             j += 1
             k += 1
-
-# Code to print the list
-
-
-def printList(arr):
-    for i in range(len(arr)):
-        print(arr[i], end=" ")
-    print()
+    return arr
 
 
 # Driver Code
 if __name__ == '__main__':
     arr = list(map(int,input().split()))
-    print("Given array is", end="\n")
-    printList(arr)
-    mergeSort(arr)
-    print("Sorted array is: ", end="\n")
-    printList(arr)
+    print("Given array is ->:",end=" ")
+    print(*arr)
+    print("Sorted array is ->:",end=" ")
+    print(*mergeSort(arr))
